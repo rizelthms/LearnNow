@@ -17,8 +17,8 @@ $gray-primary: #e7e7e9;
 $gray-lighter: #f8f8f8;
 
 //== Step 1: Brand Colors
-$brand-default: $gray-primary;
-$brand-primary: #264ae5;
+$brand-default: #f8e1e7; // Soft pink background
+$brand-primary: #ff4d8d; // Vibrant pink for primary elements
 $brand-success: #3cb33d;
 $brand-warning: #eca51c;
 $brand-danger: #e33f4e;
@@ -37,13 +37,18 @@ $font-color-default: #0a1325;
 $border-color-default: #ced0d3;
 $border-radius-default: 4px;
 
+// Global Background Colors
+$body-bg: #fff5f7; // Very light pink background
+$pagecontainer-bg: #fff; // White container background for contrast
+
 // Topbar
-$topbar-bg: #020557;
+$topbar-bg: #ff4d8d; // Vibrant pink topbar
 $topbar-minimalheight: 48px;
-$topbar-border-color: $border-color-default;
+$topbar-border-color: rgba(255, 77, 141, 0.2); // Semi-transparent pink border
 
 // Sidebar
-$sidebar-bg: #24276c;
+$sidebar-bg: #ff4d8d; // Vibrant pink sidebar
+$sidebar-color: #fff; // White text for contrast
 
 // Topbar mobile
 $m-header-height: 45px;
