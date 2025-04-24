@@ -569,14 +569,14 @@ $spacing-smaller: 4px;
 $spacing-small: 8px;
 
 // Medium spacing
-$spacing-medium: 16px;
-$t-spacing-medium: 16px;
+$spacing-medium: 20px;
+$t-spacing-medium: 20px;
 $m-spacing-medium: 16px;
 
 // Large spacing
-$spacing-large: 24px;
-$t-spacing-large: 24px;
-$m-spacing-large: 16px;
+$spacing-large: 32px;
+$t-spacing-large: 32px;
+$m-spacing-large: 20px;
 
 // Larger spacing
 $spacing-larger: 32px;
@@ -585,9 +585,9 @@ $spacing-larger: 32px;
 $spacing-largest: 48px;
 
 // Layout spacing
-$layout-spacing-top: 24px;
+$layout-spacing-top: 32px;
 $layout-spacing-right: 24px;
-$layout-spacing-bottom: 24px;
+$layout-spacing-bottom: 32px;
 $layout-spacing-left: 24px;
 
 $t-layout-spacing-top: 24px;
@@ -606,7 +606,7 @@ $m-layout-spacing: $m-layout-spacing-top $m-layout-spacing-right $m-layout-spaci
 $t-layout-spacing: $t-layout-spacing-top $t-layout-spacing-right $t-layout-spacing-bottom $t-layout-spacing-left;
 
 // Gutter size
-$gutter-size: 8px;
+$gutter-size: 16px;
 
 //== Tables
 //## Table spacing options (used in components/tables)
@@ -741,7 +741,7 @@ $card-shadow: 0 2px 8px rgba(255, 77, 141, 0.1);
 // Section Backgrounds
 $section-bg-light: #fff5f7;
 $section-bg-white: #fff;
-$section-padding: 48px 0;
+$section-padding: 64px 0;
 
 // Feature Icons
 $icon-bg: #fff5f7;
