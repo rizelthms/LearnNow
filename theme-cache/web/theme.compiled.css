@@ -28086,10 +28086,8 @@ Do not render = "none"
   z-index: 1000001;
 }
 
-/* add button - baby green, same size */
 .add-button-courseoverview {
   background-color: #a8e6cf;
-  /* pastel green */
   color: #1a1a1a;
   font-weight: 600;
   border: none;
@@ -28104,7 +28102,40 @@ Do not render = "none"
   transform: translateY(-1px);
 }
 
-/* clean up the listview cards */
+/* Page Header Styles */
+.home-header-column {
+  padding: 2rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #fff5f7 0%, #fff 100%);
+  margin-bottom: 2rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 20px rgba(255, 77, 141, 0.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.pageheader-title {
+  font-family: "Arial Black", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff4d8d;
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  display: inline-block;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
 .course-overview-listview > div {
   background-color: white;
   border-radius: 12px;
@@ -28118,7 +28149,6 @@ Do not render = "none"
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* remove side padding from listview */
 .course-overview-listview {
   margin: 0 auto;
   max-width: 100%;
@@ -28143,12 +28173,164 @@ Do not render = "none"
   cursor: pointer;
 }
 
-/* mobile adjustments */
-@media (max-width: 768px) {
-  .add-button-courseoverview {
-    width: 100%;
-    margin-top: 1rem;
+@keyframes formElementFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === Login Page Styling === */
+.loginpage {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff5f7;
+}
+
+.loginpage-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff4d8d 0%, #ff9abe 100%);
+  position: relative;
+  overflow: hidden;
+}
+.loginpage-left .loginpage-image {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.loginpage-left::before, .loginpage-left::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+}
+.loginpage-left::before {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  left: -100px;
+}
+.loginpage-left::after {
+  width: 200px;
+  height: 200px;
+  top: -80px;
+  right: -80px;
+}
+
+.loginpage-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: #fff;
+}
+
+.loginpage-formwrapper {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+.loginpage-formwrapper h2#loginHeader {
+  color: #ff4d8d;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  animation: formElementFadeInUp 0.5s ease-out 0.1s forwards;
+  opacity: 0;
+}
+.loginpage-formwrapper .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  animation: formElementFadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+.loginpage-formwrapper .form-group:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.loginpage-formwrapper .form-group:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+.loginpage-formwrapper .control-label {
+  font-weight: 600;
+  color: #0a1325;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+.loginpage-formwrapper .inputwrapper {
+  position: relative;
+}
+.loginpage-formwrapper .inputwrapper .form-control {
+  border-radius: 4px;
+  border: 1px solid #ffd6e4;
+  padding: 14px 18px 14px 45px;
+  height: auto;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.loginpage-formwrapper .inputwrapper .form-control:focus {
+  border-color: #ff4d8d;
+  box-shadow: 0 0 0 3px rgba(255, 77, 141, 0.2);
+  outline: none;
+}
+.loginpage-formwrapper .inputwrapper .glyphicon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a9acb3;
+}
+.loginpage-formwrapper .inputwrapper #passwordToggle {
+  left: auto;
+  right: 18px;
+  cursor: pointer;
+}
+.loginpage-formwrapper #loginMessage {
+  margin-bottom: 1.5rem;
+  font-size: 12px;
+  animation: formElementFadeInUp 0.5s ease-out 0.15s forwards;
+  opacity: 0;
+}
+.loginpage-formwrapper #loginButton {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #ff4d8d;
+  border-color: #ff4d8d;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 1rem;
+  animation: formElementFadeInUp 0.5s ease-out 0.4s forwards;
+  opacity: 0;
+}
+.loginpage-formwrapper #loginButton:hover {
+  background-color: #ff1a6c;
+  border-color: #ff1a6c;
+  transform: translateY(-2px);
+}
+.loginpage-formwrapper #loginButton:active {
+  transform: translateY(0);
+}
+
+.loginpage-logo {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+.loginpage-logo img {
+  height: 35px;
 }
 
 /*# sourceMappingURL=theme.compiled.css.map */
